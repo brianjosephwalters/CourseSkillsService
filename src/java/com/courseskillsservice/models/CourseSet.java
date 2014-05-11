@@ -16,6 +16,8 @@ import java.util.List;
  * @author bjw
  */
 public class CourseSet implements Serializable {
+
+    
     private List<Course> courseList;
     public CourseSet() {
         courseList = new ArrayList<Course>();
@@ -27,6 +29,10 @@ public class CourseSet implements Serializable {
     
     public List<Course> getCourseList() {
         return this.courseList;
+    }
+    
+    public void setCourseList(List<Course> courseList) {
+        this.courseList = courseList;
     }
     
 }
