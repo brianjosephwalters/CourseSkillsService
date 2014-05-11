@@ -14,6 +14,7 @@ import com.courseskillsservice.dol.NonexistentSkillException_Exception;
 import com.courseskillsservice.dol.Skill;
 import com.courseskillsservice.models.CourseSet;
 import com.courseskillsservice.queries.SkillQueries;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -90,5 +91,23 @@ public class CourseSkillsServiceImpl {
         return port.getCourse(courseID);
     }
     
+    public static void main(String[] args) {
+        CourseSkillsServiceImpl impl = new CourseSkillsServiceImpl();
+        List<Skill> skills = new ArrayList<Skill>();
+        Skill skill1 = new Skill();
+        skill1.setSkillID("1.A.1.a.2");
+        skills.add(skill1);
+//        Skill skill2 = new Skill();
+//        skill2.setSkillID("3.B.1.c");
+//        skills.add(skill2);
+//        Skill skill3 = new Skill();
+//        skill3.setSkillID("1.A.1.a.4");
+//        skills.add(skill3);
+//        Skill skill4 = new Skill();
+//        skill4.setSkillID("3.B.1.d");
+//        skills.add(skill4);
+        List<CourseSet> results = impl.recommendCourses(skills);
+        System.out.println(results);
+    }
     
 }

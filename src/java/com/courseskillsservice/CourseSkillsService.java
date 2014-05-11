@@ -37,7 +37,8 @@ public class CourseSkillsService {
     @WebMethod(operationName = "recommendCourses")
     public List<CourseSet> recommendCourses(
             @WebParam(name = "skills") List<Skill> skills) {
-        return this.impl.recommendCourses(skills);
-        
+        List<CourseSet> list = this.impl.recommendCourses(skills);
+        System.out.println(list);
+        return list;
     }
 }

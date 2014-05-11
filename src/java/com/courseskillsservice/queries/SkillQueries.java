@@ -47,19 +47,19 @@ public class SkillQueries {
         List<List<String>> list = new ArrayList<List<String>>();
         try {
             this.connection.setAutoCommit(false);
-            System.out.println("Dropping any residual tables");
+            //System.out.println("Dropping any residual tables");
             PreparedStatement dropTable = this.connection.prepareStatement(
                     " drop table skill_list "
             );
             dropTable.execute();
             
-            System.out.println("Creating temporary table");
+            //System.out.println("Creating temporary table");
             PreparedStatement createTable = this.connection.prepareStatement(
                     " CREATE GLOBAL TEMPORARY TABLE skill_list (" +
                     " skill_code  varchar(25) ) ON COMMIT DELETE ROWS");
             createTable.execute();
             
-            System.out.println("Adding data");
+            //System.out.println("Adding data");
             PreparedStatement insertSkills = this.connection.prepareStatement(
                     " INSERT INTO skill_list VALUES (?)"
             );
@@ -68,7 +68,7 @@ public class SkillQueries {
                 insertSkills.execute();
             }
            
-            System.out.println("Getting results with the big query");
+            //System.out.println("Getting results with the big query");
             ResultSet results = getLeastCoursesToCoverSkills();
             while (results.next()) {
                 List<String> combo = new ArrayList<String>();
