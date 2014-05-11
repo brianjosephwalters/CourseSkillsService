@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://cscitemp161.cs.uno.edu:8080/DOLServices/DOLService?wsdl" uri="src/conf/xml-resources/web-service-references/DOLService/wsdl/cscitemp161.cs.uno.edu_8080/DOLServices/DOLService.wsdl"/>
+    <system systemId="http://cscitemp161.cs.uno.edu:8080/DOLServices/DOLService?xsd=1" uri="src/conf/xml-resources/web-service-references/DOLService/wsdl/cscitemp161.cs.uno.edu_8080/DOLServices/DOLService.xsd_1.xsd"/>
+    <system systemId="http://cscitemp161.cs.uno.edu:8080/CourseService/CourseService?wsdl" uri="src/conf/xml-resources/web-service-references/CourseService/wsdl/cscitemp161.cs.uno.edu_8080/CourseService/CourseService.wsdl"/>
+    <system systemId="http://cscitemp161.cs.uno.edu:8080/CourseService/CourseService?xsd=1" uri="src/conf/xml-resources/web-service-references/CourseService/wsdl/cscitemp161.cs.uno.edu_8080/CourseService/CourseService.xsd_1.xsd"/>
+</catalog>
