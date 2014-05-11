@@ -7,6 +7,7 @@
 package com.courseskillsservice.models;
 
 import com.courseskillsservice.courseservice.Course;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +15,7 @@ import java.util.List;
  *
  * @author bjw
  */
-public class CourseSet {
+public class CourseSet implements Serializable {
     private List<Course> courseList;
     public CourseSet() {
         courseList = new ArrayList<Course>();

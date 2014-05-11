@@ -1,10 +1,7 @@
 package com.courseskillsservice;
 
 import com.courseskillsservice.business.CourseSkillsServiceImpl;
-import com.courseskillsservice.courseservice.Course;
-import com.courseskillsservice.courseservice.NonexistentCourseException;
 import com.courseskillsservice.courseservice.NonexistentCourseException_Exception;
-import com.courseskillsservice.dol.NonexistentSkillException_Exception;
 import com.courseskillsservice.dol.Skill;
 import com.courseskillsservice.models.CourseSet;
 import java.util.List;
@@ -37,7 +34,7 @@ public class CourseSkillsService {
         return impl.getCourseSkills(courseCode);
     }
     
-    @WebMethod(operationName = "recommmendCourses")
+    @WebMethod(operationName = "recommendCourses")
     public List<CourseSet> recommendCourses(
             @WebParam(name = "skills") List<Skill> skills) {
         return this.impl.recommendCourses(skills);
